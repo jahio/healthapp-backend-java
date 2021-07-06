@@ -1,4 +1,4 @@
-package healthapp;
+package io.jah.healthapp;
 
 import io.ebean.annotation.NotNull;
 import io.ebean.annotation.WhenCreated;
@@ -22,11 +22,11 @@ public abstract class BaseModel {
     @Id @NotNull
     UUID id;
 
-    @Column(name = "created_at", insertable = true, updatable = false)
-    @WhenCreated @NotNull
+    @Column(name = "createdAt", insertable = true, updatable = false)
+    @WhenCreated(@Column(name = "createdAt")) @NotNull
     Instant whenCreated;
 
-    @Column(name = "updated_at", insertable = false)
+    @Column(name = "updatedAt", insertable = false)
     @WhenModified @NotNull
     Instant whenModified;
 }

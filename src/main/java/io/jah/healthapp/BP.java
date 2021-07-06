@@ -1,4 +1,4 @@
-package healthapp;
+package io.jah.healthapp;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
